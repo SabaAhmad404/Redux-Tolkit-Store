@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 
-export default function Cart(){
+export default function Cart() {
+  return (
+    <>
 
-    return(
-     <>
-     
-     <h1> hello cart</h1>
-     
-     </>
+      <h1> hello cart</h1>
 
-    );
+    </>
+
+  );
 }
