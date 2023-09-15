@@ -1,15 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const STATUSES=object.freeze({
+    IDEL: 'idel',
+    Loading: 'loading',
+    ERROR: 'ERROR',
+});
 const cartSlice = createSlice({
   name: 'cart',
-  initialState,
+  initialState:{
+    data: [],
+    status: STATUSES.IDEL,
+
+  },
   reducers: {
     add(state, action) {
       state.push(action.payload);
     },
     remove(state, action) {
-      state.filter((item) => item.id !== action.payload);
+      return state.filter((item) => item.id !== action.payload);
     },
 
   },
